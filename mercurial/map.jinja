@@ -1,0 +1,7 @@
+
+{# TODO: s/mercurial/salt_name/g #}
+{% set mercurial = salt['grains.filter_by']({
+    'default': {
+        'pkg': 'mercurial',
+    },
+}, merge=salt['pillar.get']('mercurial:lookup')) %}

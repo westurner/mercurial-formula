@@ -1,3 +1,6 @@
+include:
+  - mercurial
+
 mercurial-ppa:
   pkgrepo.managed:
     - humanname: mercurial-ppa-releases-{{ grains['oscodename'] }}
@@ -10,8 +13,4 @@ mercurial-ppa:
     #- gpgkey: 
     - require_in:
       - pkg: mercurial
-
-  pkg.latest:
-    - name: mercurial
-    #- refresh: True
 
