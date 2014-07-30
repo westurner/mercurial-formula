@@ -2,7 +2,7 @@
 {% from "mercurial/map.jinja" import mercurial with context %}
 
 mercurial:
-  pkg.latest:
+  pkg.installed:
     - name: {{ mercurial.pkg }}
     #- refresh: True
 
